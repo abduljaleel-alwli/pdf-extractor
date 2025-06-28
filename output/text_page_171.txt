@@ -1,0 +1,27 @@
+Robot Vacuum Cleaner
+توبور ةيئابرهك ةسنكم
+Dustbin Capacity(ml) : 220ml
+Working Mode : Auto,Focus,Random
+Working Time : 70-80mins
+Charging Time:3-5hrs
+Battery :1500mAh Li-ion (11.1V)
+Rating Power:18W
+Rating Voltage :11.1v
+Vacuuming Power:400-500pa
+Sweeping:2 side brushes
+Suction Port
+لم 220 :)لم( تلامهملا ةلس ةعس
+يئاوشع , يئاقلت , ددحم : عاضولأا
+ةقيقد 80 ىلإ 70 : لمعلا تقو
+تاعاس 5 ىلإ 3 نم : نحشلا
+(11.1V( نويأ مويثيل 1500mAh : ةيراطبلا
+18W : ةقاطلا فينصت
+11.1V : دهجلا فينصت
+400-500pa : ةيئابرهكلا ةسنكملاب فيظنتلا ةوق
+مادختسلاا لهسو فيظنتلل دحاو رز
+ةيبناج شرف 2 : سنكلا
+طفشلا ذفنم
+MODEL : 806.108.001
+Rating & Power : 220-240V ~ 50/60Hz 1600 W
+طاو 1600 زتره 60-50 ~ تلوف 240-220
+171

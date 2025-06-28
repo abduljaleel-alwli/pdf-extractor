@@ -1,0 +1,30 @@
+Model : KOSACS12K C Model : KOSACS12K HC Model : KOSACS18K C Model : KOSACS18H C
+Koolen Model : 106.959.011 Koolen Model : 106.959.012 Koolen Model : 106.959.013 Koolen Model : 106.959.014
+Barcode : 6285353008178 Barcode : 6285353008185 Barcode : 6285353008192 Barcode : 6285353008208
+Indoor Unit Indoor Unit Indoor Unit Indoor Unit
+1. Rated:230v,60hz 1. Rated:230v,60hz 1. Rated:230v,60hz 1. Rated:230v,60hz
+2. Cooling Capacity :11900Btu/h ,3.48kW 2. Cooling Capacity :11800Btu/h ,3.45kW 2. Cooling Capacity :18500Btu/h ,5.43kW 2. Cooling Capacity :18500Btu/h ,5.43kW
+3. Air Flow Volume:670m³/h 3. Heating Capacity:3500W 3. Air Flow Volume:1100m³/h 3. Heating Capacity:5000W
+4. Refrigerant :R410A 4. Air Flow Volume:670m³/h 4. Refrigerant :R410A 4. Air Flow Volume:1100m³/h
+5. Set Temperature Range :16°~30°C 5. Refrigerant :R410A 5. Set Temperature Range :16°~30°C 5. Refrigerant :R410A
+6. Product Weight :9.5kg 6. Set Temperature Range :16°~30°C 6. Product Weight :13.5kg 6. Set Temperature Range :16°~30°C
+7. Dimension (L×W×H) :835×275×200mm 7. Product Weight :9.5kg 7. Dimension (L×W×H) :943×333×246mm 7. Product Weight :13.5kg
+8. Dimension (L×W×H) :835×275×200mm 8. Dimension (L×W×H) :943×333×246mm
+Outdoor Unit Outdoor Unit Outdoor Unit Outdoor Unit
+1. Rated:230v,60hz 1. Rated:230v,60hz 1. Rated:230v,60hz
+2. Climate Type:T3 2. Climate Type:T3 2. Climate Type:T3 1. Rated:230v,60hz
+3. T1 Cooling Capacity :11900Btu/h ,3.48kW 3. T1 Cooling Capacity :11800Btu/h ,3.45kW, 3. T1 Cooling Capacity :18500Btu/h ,5.43kW, 2. Climate Type:T3
+4. T1 cooling power:971W 4. T1 cooling power:971W 4. T1 cooling power:1492W 3. T1 Cooling Capacity :18500Btu/h ,5.43kW,
+5. T3 Cooling Capacity :10100Btu/h , 2.97kW, 5. T3 Cooling Capacity :10200Btu/h , 3kW, 5. T3 Cooling Capacity :15900Btu/h , 4.65kW, 4. T1 cooling power:1492W
+6. T3 cooling power:1154W 6. T3 cooling power:1165W 6. T3 cooling power:1802W 5. T3 Cooling Capacity :15900Btu/h , 4.65kW,
+7. Refrigerant :R410A 7. Heating capacity :3500W , 7. Refrigerant :R410A 6. T3 cooling power:1802W
+8. Refri. Charge:0.95kg 8. Heating power input :972W 8. Refri. Charge:1.1kg 7. Heating capacity :5000W
+9. Rated Current:7A 9. Refrigerant :R410A 9. Rated Current:11 A 8. Heating power input :1316W
+10. Moisture Protection: IPX4 10. Refri. Charge:1.22kg 10. Moisture Protection: IPX4 9. Refrigerant :R410A
+11. Operating Pressure:4.3/2.5MPa 11. Rated Current:6.7A 11. Operating Pressure:4.3/2.5MPa 10. Refri. Charge:1.1kg
+12. Product Weight :31.5kg 12. Moisture Protection: IPX4 12. Product Weight :44.5kg 11. Rated Current:11 A
+13. Product Dimension (L×W×H) :732×555×330mm 13. Operating Pressure:4.3/2.5MPa 13. Product Dimension (L×W×H) :958×660×402mm 12. Moisture Protection: IPX4
+14. Product Weight :35kg 13. Operating Pressure:4.3/2.5MPa
+15. Product Dimension (L×W×H) :802×555×350mm 14. Product Weight :44.5kg
+15. Product Dimension (L×W×H) :958×660×402mm
+241

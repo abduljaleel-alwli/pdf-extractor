@@ -1,0 +1,26 @@
+HOT | NORMAL | COLD
+Water Dispenser
+3 WATER FUNCTIONS
+ءام دارب
+ةدرابلاو ةيداعلاو ةنخاسلا هايملل فئاظو 3
+لفطلا نامأ لفق
+ديدج ونايب ءام روبنص ىلع طغضا
+فئاظولا ددعتمو يكذ ميمصت
+ةءافكلا يلاع طغاض
+أدصي لا يذلا ذلاوفلا نم هايم نازخ
+يئيبلا ةئفدتلاو ديربتلا ماظن
+ةرارحلا ةجرد يف جودزم مكحت
+فافجلل داضم ةئفدت ميمصت
+وساس رايعم
+راح
+يداع
+دراب
+فئاظو 3
+MODEL : 807.103.018
+MODEL : 807.103.019
+Ratad Voltage : 220-240v Heating Capacity : 85-95°C 5l/H
+Rated Frequency : 50/60hz Cooling Capacity : 4-12°C 2l/H
+Rated Input Power : 590w Refrigerant : R134a/32g
+Heating Power : 500w Climatic Class : T
+142 Cooling Power : 90w N.w./G.w. : 112.9/14.1 kg
+Cooling Current : 0.7a Dimension : 33.5 *32.5*100.5cm
