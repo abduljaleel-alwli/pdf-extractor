@@ -35,15 +35,16 @@ def extract_images(pdf_path: str, images_dir: str) -> int:
 
 def extract_text(pdf_path: str, texts_dir: str) -> int:
     """
-    Extracts text from each page in the PDF and saves it as .txt files in texts_dir.
+    Extracts Arabic-friendly text from each page in the PDF and saves it as .txt files.
     """
-    with pdfplumber.open(pdf_path) as pdf:
-        for i, page in enumerate(pdf.pages):
-            text = page.extract_text()
-            text_filename = os.path.join(texts_dir, f"text_page_{i+1}.txt")
-            with open(text_filename, "w", encoding="utf-8") as f:
-                f.write(text or "")
-    return len(pdf.pages)
+    doc = fitz.open(pdf_path)
+    for page_index in range(len(doc)):
+        page = doc.load_page(page_index)
+        text = page.get_text("text")  # Supports Arabic text direction
+        text_filename = os.path.join(texts_dir, f"text_page_{page_index+1}.txt")
+        with open(text_filename, "w", encoding="utf-8") as f:
+            f.write(text or "")
+    return len(doc)
 
 
 def create_output_structure(base_name: str = "output") -> tuple:

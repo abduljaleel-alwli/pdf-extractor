@@ -71,13 +71,14 @@ def extract_images(pdf_path, images_dir):
     return image_count
 
 def extract_text(pdf_path, texts_dir):
-    with pdfplumber.open(pdf_path) as pdf:
-        for i, page in enumerate(pdf.pages):
-            text = page.extract_text()
-            text_filename = os.path.join(texts_dir, f"text_page_{i+1}.txt")
-            with open(text_filename, "w", encoding="utf-8") as f:
-                f.write(text or "")
-    return len(pdf.pages)
+    doc = fitz.open(pdf_path)
+    for page_num in range(len(doc)):
+        page = doc.load_page(page_num)
+        text = page.get_text("text")  # يمكن استخدام "text" أو "blocks"
+        text_filename = os.path.join(texts_dir, f"text_page_{page_num+1}.txt")
+        with open(text_filename, "w", encoding="utf-8") as f:
+            f.write(text or "")
+    return len(doc)
 
 def create_output_dirs(base_dir="output"):
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
