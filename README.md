@@ -3,7 +3,7 @@
 This repository contains [brief project name or purpose – e.g., "Product PDF Extractor"], a tool designed to:
 
 - Extract product images and data from PDF catalogs
-- Save content in organized formats (images, text, or CSV)
+- Save content in organized formats (images, text)
 - Automate tedious manual processes for faster results
 
 > ✅ Ideal for digital stores, content managers, and product catalog digitization.
