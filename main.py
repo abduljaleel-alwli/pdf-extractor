@@ -1,11 +1,21 @@
-import os
 import fitz  # PyMuPDF
 import pdfplumber
-import argparse
+import os
 from datetime import datetime
 
+try:
+    from colorama import Fore, Style, init
+    init(autoreset=True)
+except ImportError:
+    class Dummy:
+        def __getattr__(self, _): return ''
+    Fore = Style = Dummy()
 
-def extract_images(pdf_path, output_dir):
+
+def extract_images(pdf_path: str, images_dir: str) -> int:
+    """
+    Extracts all images from the PDF and saves them to the images directory.
+    """
     doc = fitz.open(pdf_path)
     image_count = 0
 
@@ -15,9 +25,7 @@ def extract_images(pdf_path, output_dir):
             base_image = doc.extract_image(xref)
             image_bytes = base_image["image"]
             image_ext = base_image["ext"]
-            image_filename = os.path.join(
-                output_dir, f"image_p{page_index+1}_{img_index+1}.{image_ext}"
-            )
+            image_filename = os.path.join(images_dir, f"image_p{page_index+1}_{img_index+1}.{image_ext}")
             with open(image_filename, "wb") as f:
                 f.write(image_bytes)
             image_count += 1
@@ -25,48 +33,55 @@ def extract_images(pdf_path, output_dir):
     return image_count
 
 
-def extract_texts(pdf_path, output_dir):
+def extract_text(pdf_path: str, texts_dir: str) -> int:
+    """
+    Extracts text from each page in the PDF and saves it as .txt files in texts_dir.
+    """
     with pdfplumber.open(pdf_path) as pdf:
         for i, page in enumerate(pdf.pages):
             text = page.extract_text()
-            text_filename = os.path.join(output_dir, f"text_page_{i+1}.txt")
+            text_filename = os.path.join(texts_dir, f"text_page_{i+1}.txt")
             with open(text_filename, "w", encoding="utf-8") as f:
                 f.write(text or "")
     return len(pdf.pages)
 
 
-def make_output_dir(base_dir="output"):
+def create_output_structure(base_name: str = "output") -> tuple:
+    """
+    Creates a structured output directory with images/ and texts/ subfolders.
+    Returns the full paths of (main_dir, images_dir, texts_dir).
+    """
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    output_path = os.path.join(base_dir, f"run_{timestamp}")
-    os.makedirs(output_path, exist_ok=True)
-    return output_path
+    main_dir = os.path.join(base_name, f"extract_{timestamp}")
+    images_dir = os.path.join(main_dir, "images")
+    texts_dir = os.path.join(main_dir, "texts")
+
+    os.makedirs(images_dir, exist_ok=True)
+    os.makedirs(texts_dir, exist_ok=True)
+
+    return main_dir, images_dir, texts_dir
 
 
 def main():
-    parser = argparse.ArgumentParser(description="PDF Product Extractor by Shamll Tech")
-    parser.add_argument("pdf", help="Path to the PDF file")
-    parser.add_argument("-o", "--output", help="Output directory (optional)", default="output")
-    args = parser.parse_args()
+    print(Fore.CYAN + "\n📄 PDF Image & Text Extractor - By Shamll Tech\n" + Style.RESET_ALL)
 
-    pdf_path = args.pdf
-    output_base = args.output
+    pdf_path = input("🔍 Enter the full path to your PDF file: ").strip()
 
     if not os.path.isfile(pdf_path):
-        print(f"❌ File not found: {pdf_path}")
+        print(Fore.RED + "❌ Error: File does not exist or path is incorrect.\n")
         return
 
-    output_dir = make_output_dir(output_base)
-    print(f"📁 Output will be saved to: {output_dir}\n")
+    output_dir, images_dir, texts_dir = create_output_structure()
 
-    print("📤 Extracting images...")
-    image_count = extract_images(pdf_path, output_dir)
-    print(f"✅ Extracted {image_count} images.")
+    print(Fore.YELLOW + "\n🖼️ Extracting images...")
+    image_count = extract_images(pdf_path, images_dir)
+    print(Fore.GREEN + f"✅ {image_count} images extracted and saved to: {images_dir}")
 
-    print("📤 Extracting text...")
-    page_count = extract_texts(pdf_path, output_dir)
-    print(f"✅ Extracted text from {page_count} pages.")
+    print(Fore.YELLOW + "\n📝 Extracting text...")
+    text_count = extract_text(pdf_path, texts_dir)
+    print(Fore.GREEN + f"✅ Text extracted from {text_count} pages and saved to: {texts_dir}")
 
-    print("\n🎉 Extraction completed successfully!")
+    print(Fore.CYAN + f"\n📁 All results are organized under: {output_dir}\n")
 
 
 if __name__ == "__main__":

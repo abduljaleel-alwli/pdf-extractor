@@ -26,7 +26,7 @@ This repository contains [brief project name or purpose – e.g., "Product PDF E
 
 ```bash
 git clone https://github.com/abduljaleel-alwli/pdf-extractor.git
-cd product-extractor
+cd pdf-extractor
 ```
 
 2. Install the required packages:
@@ -47,8 +47,12 @@ After running the script, you'll find an output/ folder containing:
 
 ```bash
 output/
-├── image_1_1.jpg
-├── image_1_2.png
-├── text_page_1.txt
-└── ...
+└── extract_20250627_224012/
+    ├── images/
+    │   ├── image_p1_1.jpg
+    │   └── ...
+    └── texts/
+        ├── text_page_1.txt
+        └── ...
+
 ```
